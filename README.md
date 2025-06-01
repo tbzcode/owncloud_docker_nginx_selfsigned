@@ -9,4 +9,12 @@ I searched all over internet, but didn'y found this type of setup. So keeping it
 Local IP Address: 192.168.0.12
 Port to access server: 8443
 
+## Communication port mapping
+nginx docker will listen to port 8443 which is mapped to its internal port 443 (8443:443)
+ngixx will communcate to owncloud docker on port 8080 which is mapped to owncloud's internal port 8080 (8080:8080)
+
+## Installation
+- Download or Clone the repo
+
+
 
