@@ -1,2 +1,12 @@
-# owncloud_docker_nginx_selfsigned
+# ownCloud docker setup with nginx selfsigned certificates
 This is the ownCloud docker setup running with nginx reverse proxy with self signed certificates. 
+Purpose of this setup is to run on local network and access via HTTPS.
+Since HTTPS is supported, owncloud server can be connected to FolderSync mobile app.
+
+I searched all over internet, but didn'y found this type of setup. So keeping it here.
+
+## Assumptions
+Local IP Address: 192.168.0.12
+Port to access server: 8443
+
+
