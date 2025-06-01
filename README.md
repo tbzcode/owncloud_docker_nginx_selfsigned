@@ -16,15 +16,23 @@ I searched all over internet, but didn'y found this type of setup. So keeping it
 
 ## Installation
 - Download or Clone the repo. owncloud is going to be main directory of installation.
-  > `cd owncloud`
+  ```
+  cd owncloud
+  ```
 - Generated self signed certificates.
-  > `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx/certs/server.key -out nginx/certs/server.crt -subj "/CN=192.168.0.12"`
+  ```
+  sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx/certs/server.key -out nginx/certs/server.crt -subj "/CN=192.168.0.12"
+  ```
 - Install and run docker images.
-  > `docker compose up -d`
+  ```
+  docker compose up -d
+  ```
 ## Post installation configuration
 - Open config.php
-  > `docker compose down # Stop container to allow some configuration change`
-  > `sudo nano owncloud_data/config/config.php # Open congiguration file`
+  ```
+  docker compose down                       # Stop container to allow some configuration change
+  sudo nano owncloud_data/config/config.php # Open congiguration file
+  ```
 - Add following lines
   ```
   'overwriteprotocol' => 'https',                   
@@ -35,9 +43,13 @@ I searched all over internet, but didn'y found this type of setup. So keeping it
   #'files_external_allow_create_new_local' => true,  # Use if you want to add external USB drive
   ```
 ## Start container again
-> `docker compose up -d`
+  ```
+  docker compose up -d
+  ```
 ## Accessing owncloud server
 Open web browser in same computer or any other computer in same network. Open below URL
-> `https://192.168.0.12:8443`
+  ```
+  https://192.168.0.12:8443
+  ```
 
 
